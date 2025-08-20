@@ -2,149 +2,193 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Mohamed Umar | VLSI Designer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohamed Umar — Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <style>
-    /* Fonts and Base */
-    body {
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      background: linear-gradient(145deg, #0f0f0f, #1c1c1c);
-      color: #00ffe0;
-      font-family: 'Courier New', monospace;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-    }
-
-    /* Tech Grid Background */
-    body::before {
-      content: "";
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(#222 1px, transparent 1px), 
-                  linear-gradient(90deg, #222 1px, transparent 1px);
-      background-size: 40px 40px;
-      z-index: 0;
-      opacity: 0.2;
-    }
-
-    /* Container Styling */
-    .container {
-      position: relative;
-      background: rgba(25, 25, 25, 0.85);
-      border: 1px solid #00ffe0;
-      border-radius: 12px;
-      padding: 40px;
-      max-width: 700px;
-      width: 90%;
-      text-align: center;
-      box-shadow: 0 0 20px rgba(0, 255, 224, 0.3);
-      z-index: 1;
-      animation: fadeIn 1s ease;
-    }
-
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: scale(0.95);
-      }
-      to {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-
-    h1 {
-      font-size: 2.8em;
-      color: #00ffe0;
-      text-shadow: 0 0 10px #00ffe0;
-    }
-
-    .highlight {
-      color: #ff00cc;
-      font-weight: bold;
-      text-shadow: 0 0 5px #ff00cc;
-      transition: color 0.3s ease;
-    }
-
-    .highlight:hover {
-      color: #ff77dd;
-    }
-
-    p {
-      font-size: 1.2em;
-      line-height: 1.6;
-      margin: 20px 0;
-    }
-
-    /* Social Links */
-    .social-links {
-      margin-top: 30px;
-    }
-
-    .social-links a {
-      margin: 0 15px;
-      font-size: 1.5em;
-      text-decoration: none;
-      color: #00ffe0;
-      border-bottom: 2px solid transparent;
-      transition: all 0.3s ease;
-      position: relative;
-    }
-
-    .social-links a::after {
-      content: '';
-      display: block;
-      height: 2px;
-      width: 0;
-      background: #ff00cc;
-      transition: width 0.3s;
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-    }
-
-    .social-links a:hover {
-      color: #ff00cc;
-    }
-
-    .social-links a:hover::after {
-      width: 100%;
-    }
-
-    /* Glowing effect on hover */
-    .social-links a:hover {
-      text-shadow: 0 0 8px #ff00cc;
-    }
-
-    /* Responsive */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 2em;
-      }
-
-      .social-links a {
-        font-size: 1.2em;
-      }
+    @media print {
+      header, nav, button { display: none !important; }
+      a { text-decoration: none; color: inherit; }
+      section { break-inside: avoid; }
+      body { background: white; }
     }
   </style>
 </head>
-<body>
-  <div class="container">
-    <h1>Hi, I'm <span class="highlight">Umar</span></h1>
-    <p>Welcome to my personal webpage. I'm passionate about <span class="highlight">semiconductors and embedded systems</span> and I thrive at the intersection of innovation, logic, and creation. Whether it's coding, circuit crafting, or technical writing — I'm always building something new.</p>
-    <p>Check out my work or connect with me through these links:</p>
-
-    <div class="social-links">
-      <a href="https://github.com/[YourUsername]" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/[YourLinkedIn]" target="_blank">LinkedIn</a>
-      <a href="mailto:[YourEmail]" target="_blank">Email</a>
+<body class="min-h-screen bg-gradient-to-b from-white via-gray-50 to-gray-100 text-gray-900">
+  <!-- Header -->
+  <header class="sticky top-0 z-40 backdrop-blur bg-white/70 border-b">
+    <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+      <a href="#home" class="font-semibold tracking-tight text-lg">Mohamed Umar</a>
+      <nav class="flex items-center gap-4 text-sm">
+        <a class="hover:opacity-80" href="#experience">Experience</a>
+        <a class="hover:opacity-80" href="#education">Education</a>
+        <a class="hover:opacity-80" href="#skills">Skills</a>
+        <a class="hover:opacity-80" href="#publications">Publications</a>
+        <a class="hover:opacity-80" href="#contact">Contact</a>
+      </nav>
     </div>
-  </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="max-w-5xl mx-auto px-4 py-14">
+    <div class="grid md:grid-cols-5 gap-6 items-center">
+      <div class="md:col-span-3">
+        <h1 class="text-3xl md:text-4xl font-bold tracking-tight">
+          Electrical Engineering Graduate • Embedded & ADAS/C‑V2X
+        </h1>
+        <p class="mt-3 text-gray-600">
+          Graduate student at ASU with experience in automotive embedded systems, model‑based development (MATLAB/Simulink), HIL/MIL simulation, control systems and networking. I build robust embedded software, automate tests, and analyze systems at scale.
+        </p>
+        <div class="mt-5 flex flex-wrap gap-3">
+          <a href="mailto:mumar10@asu.edu" class="inline-flex items-center gap-2 rounded-2xl border px-4 py-2 shadow hover:shadow-md">Email</a>
+          <a href="tel:+16232081793" class="inline-flex items-center gap-2 rounded-2xl border px-4 py-2 shadow hover:shadow-md">Call</a>
+          <a href="https://linkedin.com/in/mohamed-umar-725315200" target="_blank" class="inline-flex items-center gap-2 rounded-2xl border px-4 py-2 shadow hover:shadow-md">LinkedIn</a>
+          <button onclick="window.print()" class="inline-flex items-center gap-2 rounded-2xl border px-4 py-2 shadow hover:shadow-md">Print / Save PDF</button>
+        </div>
+      </div>
+      <div class="md:col-span-2">
+        <div class="rounded-2xl border p-4 shadow-sm">
+          <div class="text-sm text-gray-600">Tempe, AZ</div>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li>Model‑Based Dev (MATLAB/Simulink), HIL/MIL</li>
+            <li>ADAS • C‑V2X • Vehicle Integration</li>
+            <li>Wireless Metrics: RSSI • PER • Latency</li>
+            <li>PNT via RSSI Localization</li>
+            <li>Nordic nRF • Zephyr RTOS • CAN</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="max-w-5xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-semibold tracking-tight">Experience</h2>
+    <div class="mt-6 space-y-6">
+      <article class="rounded-2xl border p-5 shadow-sm bg-white/70">
+        <div class="flex flex-wrap items-center justify-between">
+          <div>
+            <h3 class="text-lg font-semibold">Lab Assistant</h3>
+            <p class="text-gray-600">Performance & Resource Optimization Lab (ASU)</p>
+          </div>
+          <div class="text-sm">May 2025 – Present</div>
+        </div>
+        <div class="text-sm text-gray-600">Tempe, AZ</div>
+        <ul class="mt-3 list-disc pl-5 text-sm space-y-1">
+          <li>Developing embedded software for 218+ solar‑powered nRF5340 nodes with real‑time data acquisition and OTA updates.</li>
+          <li>Implemented distributed diagnostics collection (power, RSSI, PER, latency) across a wireless mesh.</li>
+          <li>Researching an RSSI‑based PNT localization system for MS thesis.</li>
+        </ul>
+      </article>
+
+      <article class="rounded-2xl border p-5 shadow-sm bg-white/70">
+        <div class="flex flex-wrap items-center justify-between">
+          <div>
+            <h3 class="text-lg font-semibold">Graduate Engineer – Systems Engineering</h3>
+            <p class="text-gray-600">Danlaw Inc. (Cohda Wireless parent company)</p>
+          </div>
+          <div class="text-sm">Jul 2022 – Oct 2024</div>
+        </div>
+        <div class="text-sm text-gray-600">Bengaluru, India</div>
+        <ul class="mt-3 list-disc pl-5 text-sm space-y-1">
+          <li>Built ADAS & C‑V2X applications integrating Camera, GNSS, IMU and C‑V2X radio inputs.</li>
+          <li>Developed HIL/MIL automotive simulators using Unreal Engine for bench testing & validation.</li>
+          <li>Led vehicle installs: power provisioning, CAN integration, GNSS/IMU calibration and algorithm tuning.</li>
+          <li>Automated test pipelines, scripted data collection and analyzed throughput & latency performance.</li>
+          <li>Mentored interns on MATLAB/Simulink, embedded programming and hardware setups.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="max-w-5xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-semibold tracking-tight">Education</h2>
+    <div class="mt-6 grid md:grid-cols-2 gap-6">
+      <div class="rounded-2xl border p-5 shadow-sm bg-white/70">
+        <h3 class="text-lg font-semibold">M.S., Electrical Engineering</h3>
+        <p class="text-gray-600">Arizona State University, Tempe, AZ</p>
+        <div class="text-sm">Jan 2025 – Present</div>
+        <p class="mt-2 text-sm font-medium">Relevant Coursework:</p>
+        <ul class="list-disc pl-5 text-sm space-y-1">
+          <li>VLSI Design</li>
+          <li>Foundations of Algorithms</li>
+          <li>Embedded Machine Learning</li>
+          <li>Digital SoC Design</li>
+          <li>Statistical ML</li>
+        </ul>
+      </div>
+      <div class="rounded-2xl border p-5 shadow-sm bg-white/70">
+        <h3 class="text-lg font-semibold">B.E., Electronics & Communication Engineering (GPA 3.35)</h3>
+        <p class="text-gray-600">Anna University, Chennai, India</p>
+        <div class="text-sm">Jul 2022</div>
+        <p class="mt-2 text-sm font-medium">Relevant Coursework:</p>
+        <ul class="list-disc pl-5 text-sm space-y-1">
+          <li>Embedded & Real‑Time Systems</li>
+          <li>Signals & Systems</li>
+          <li>Discrete‑Time Signal Processing</li>
+          <li>Control Systems</li>
+          <li>Data Structures in C</li>
+          <li>Python Programming</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="max-w-5xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-semibold tracking-tight">Technical Skills</h2>
+    <div class="mt-6 space-y-6">
+      <div>
+        <h3 class="text-sm uppercase tracking-wider text-gray-500">Tools & Modeling</h3>
+        <p class="mt-2 text-sm">MATLAB, Simulink, Unreal Engine (Automotive), Cadence Virtuoso, ModelSim</p>
+      </div>
+      <div>
+        <h3 class="text-sm uppercase tracking-wider text-gray-500">Programming</h3>
+        <p class="mt-2 text-sm">Python, C/C++, JavaScript, Node.js, React, Java, HTML/CSS</p>
+      </div>
+      <div>
+        <h3 class="text-sm uppercase tracking-wider text-gray-500">Embedded & Hardware</h3>
+        <p class="mt-2 text-sm">Nordic nRF5340/nRF7002DK, Zephyr RTOS, CAN, UART, Ethernet, GNSS, IMU, OTA Updates</p>
+      </div>
+      <div>
+        <h3 class="text-sm uppercase tracking-wider text-gray-500">Domains</h3>
+        <p class="mt-2 text-sm">ADAS, C‑V2X, HIL/MIL Simulation, Control Systems, Signal Processing, Computer Vision (CUDA basics)</p>
+      </div>
+      <div>
+        <h3 class="text-sm uppercase tracking-wider text-gray-500">Other</h3>
+        <p class="mt-2 text-sm">Linux, Networking, Scripting & Automation</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <section id="publications" class="max-w-5xl mx-auto px-4 py-10">
+    <h2 class="text-2xl font-semibold tracking-tight">Publications</h2>
+    <article class="rounded-2xl border p-5 shadow-sm bg-white/70 mt-6">
+      <div class="text-sm text-gray-600">N. Hemavathy; V. Gopi; M. Umar; Siva Rahul S • May 2022</div>
+      <h3 class="mt-1 font-semibold">Internet of Things‑based Personal Private Server Computing</h3>
+      <p class="text-sm text-gray-600">International Conference on Edge Computing and Applications</p>
+      <a href="https://ieeexplore.ieee.org/document/9936272" target="_blank" class="mt-3 inline-block text-blue-600 underline">View on IEEE Xplore</a>
+    </article>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="max-w-5xl mx-auto px-4 py-14">
+    <div class="rounded-2xl border p-6 shadow-sm bg-white/70">
+      <h2 class="text-2xl font-semibold tracking-tight">Get in touch</h2>
+      <p class="mt-2 text-gray-600">
+        I’m open to roles in embedded systems, ADAS/C‑V2X, and model‑based development. If you’re building safety‑critical or performance‑sensitive systems, let’s talk.
+      </p>
+      <div class="mt-5 flex flex-wrap gap-3">
+        <a href="mailto:mumar10@asu.edu" class="inline-flex items-center gap-2 rounded-2xl border px-4 py-2 shadow hover:shadow-md">mumar10@asu.edu</a>
+        <a href="tel:+16232081793" class="inline-flex items-center gap-2 rounded-2xl border px-4 py-2 shadow hover:shadow-md">+1 (623) 208‑1793</a>
+        <a href="https://linkedin.com/in/mohamed-umar-725315200" target="_blank" class="inline-flex items-center gap-2 rounded-2xl border px-4 py-2 shadow hover:shadow-md">LinkedIn</a>
+      </div>
+    </div>
+    <footer class="mt-10 pb-10 text-center text-xs text-gray-500">
+      © 2025 Mohamed Umar • Built with HTML & Tailwind CSS
+    </footer>
+  </section>
 </body>
 </html>
