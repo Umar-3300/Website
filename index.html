@@ -169,16 +169,19 @@
       <article class="rounded-2xl border p-5 shadow-sm bg-white/70">
         <div class="flex flex-wrap items-center justify-between">
           <div>
-            <h3 class="text-lg font-semibold">Autonomous Vehicle Sensor Fusion Framework</h3>
-            <p class="text-gray-600">Performance & Resource Optimization Lab (ASU)</p>
+            <h3 class="text-lg font-semibold">Autonomous Vehicle Sensor Fusion Test Framework</h3>
+            <p class="text-gray-600">Danlaw Inc.</p>
           </div>
-          <div class="text-sm">May 2025 – Oct 2025</div>
+          <div class="text-sm">May 2023 - Oct 2024</div>
         </div>
-        <div class="text-sm text-gray-600">Tempe, AZ</div>
+        <div class="text-sm text-gray-600">Bengaluru, India</div>
         <ul class="mt-3 list-disc pl-5 text-sm space-y-1">
-          <li>Developed a modular simulation framework integrating camera, LiDAR, GNSS, and IMU sensors for vehicle localization and tracking.</li>
-          <li>Implemented EKF-based sensor fusion and tested in MIL and HIL setups using Unreal Engine’s CARLA environment.</li>
-          <li>Evaluated path planning and collision avoidance algorithms under diverse environmental conditions.</li>
+          <li>Developed Automotive software simulator involving vehicle, pedestrian and intersection actors</li>
+          <li>Wrote GNSS, IMU, CAN, Camera, V2X radio submodules of above main actors</li>
+          <li>Wrote controllers(PID) submodule to close error between target state and current state of actors</li>
+          <li>Wrote connectivity submodule to simulate sensor values, actor dynamics to HIL(hardware-in-loop) or MIL(model-in-loop)</li>
+          <li>Wrote logging modules to replay only simulated data without graphics for platform independent usage</li>
+          <li>Wrote UI for ease of use and to display results pass/fail</li>
         </ul>
       </article>
 
@@ -186,16 +189,17 @@
       <article class="rounded-2xl border p-5 shadow-sm bg-white/70">
         <div class="flex flex-wrap items-center justify-between">
           <div>
-            <h3 class="text-lg font-semibold">IoT Power Monitoring Node Network</h3>
-            <p class="text-gray-600">Performance & Resource Optimization Lab (ASU)</p>
+            <h3 class="text-lg font-semibold">Adaptive cruise control (Platooning)</h3>
+            <p class="text-gray-600">Danlaw Inc.</p>
           </div>
-          <div class="text-sm">Mar 2025 – Aug 2025</div>
+          <div class="text-sm">April 2023</div>
         </div>
-        <div class="text-sm text-gray-600">Tempe, AZ</div>
+        <div class="text-sm text-gray-600">Bengaluru, India</div>
         <ul class="mt-3 list-disc pl-5 text-sm space-y-1">
-          <li>Built a distributed mesh of solar-powered embedded nodes for wireless diagnostics and performance analytics.</li>
-          <li>Implemented OTA firmware updates, FOTA fault recovery, and real-time mesh status monitoring via MQTT.</li>
-          <li>Integrated Python-based visualization tools for node telemetry and network efficiency metrics.</li>
+          <li>Developed follower vehicle model for PID longitudinal(throttle, brake) and lateral(steer) controllers</li>
+          <li>Wrote interfaces(UDP/IP) connecting model to actor vehicle in simulator</li>
+          <li>Model correctly and quickly corrects intervehicle distance error and heading errors accurately</li>
+          <li>Controller stable for speed under 120 km/h</li>
         </ul>
       </article>
 
@@ -203,21 +207,57 @@
       <article class="rounded-2xl border p-5 shadow-sm bg-white/70">
         <div class="flex flex-wrap items-center justify-between">
           <div>
-            <h3 class="text-lg font-semibold">FPGA-Based Digital Signal Processor</h3>
-            <p class="text-gray-600">Anna University — Final Year Capstone Project</p>
+            <h3 class="text-lg font-semibold">Adaptive Cruise Control (Platooning)</h3>
+            <p class="text-gray-600">Danlaw Inc.</p>
           </div>
-          <div class="text-sm">Jan 2022 – May 2022</div>
+          <div class="text-sm">Mar 2025 – Aug 2025</div>
         </div>
-        <div class="text-sm text-gray-600">Chennai, India</div>
+        <div class="text-sm text-gray-600">Tempe, AZ</div>
         <ul class="mt-3 list-disc pl-5 text-sm space-y-1">
-          <li>Designed and synthesized a custom DSP block performing FIR filtering on an FPGA board using Verilog.</li>
-          <li>Validated timing and functional performance via ModelSim simulation and hardware testing.</li>
-          <li>Reduced power consumption by 15% through optimized logic synthesis and pipelined architecture.</li>
+          <li>Wrote embedded software for a cluster solar-powered embedded nodes for wireless diagnostics and performance analytics.</li>
+          <li>Implemented OTA firmware update capabilities, FOTA fault recovery, and real-time mesh status monitoring via MQTT.</li>
+          <li>Integrated Python-based visualization tools for node telemetry and access.</li>
         </ul>
       </article>
-    </div>
-  </section>
 
+
+      <!-- Project 4 -->
+      <article class="rounded-2xl border p-5 shadow-sm bg-white/70">
+          <div class="flex flex-wrap items-center justify-between">
+            <div>
+              <h3 class="text-lg font-semibold"></h3>
+              <p class="text-gray-600">Anna University (VEC) — Final Year Capstone Project</p>
+            </div>
+            <div class="text-sm">Jan 2022 – May 2022</div>
+          </div>
+          <div class="text-sm text-gray-600">Chennai, India</div>
+          <ul class="mt-3 list-disc pl-5 text-sm space-y-1">
+            <li>Remote access of at home personal computer from anywhere in the world through mobile application</li>
+            <li>Wrote mobile app UI with React native</li>
+            <li>Programmed ESP32 chips to control power inputs to personal computer over the internet</li>
+            <li>Wrote backend node-js programs in personal computer to handle client requests from mobile directly</li>
+            <li>Published Journal IEEE conference</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+      <!-- Project 5 -->
+    <article class="rounded-2xl border p-5 shadow-sm bg-white/70">
+      <div class="flex flex-wrap items-center justify-between">
+        <div>
+          <h3 class="text-lg font-semibold">GCN accelerator (VLSI Design EEE 525)</h3>
+          <p class="text-gray-600">Arizona State University</p>
+        </div>
+        <div class="text-sm">Apr 2025 – May 2025</div>
+      </div>
+      <div class="text-sm text-gray-600">Tempe, AZ</div>
+      <ul class="mt-3 list-disc pl-5 text-sm space-y-1">
+        <li> Implemented a VLSI architecture for Graph Convolutional Networks</li>
+        <li> Designed RTL modules for sparse matrix operations, feature transformation, and node classification.</li>
+      </ul>
+    </article>
+      
 
   <!-- Publications -->
   <section id="publications" class="max-w-5xl mx-auto px-4 py-10">
